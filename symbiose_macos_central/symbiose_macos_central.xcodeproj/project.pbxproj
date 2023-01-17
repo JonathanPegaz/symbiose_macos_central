@@ -1,0 +1,1007 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABB147192977508000E9EF56 /* symbiose_macos_centralApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147182977508000E9EF56 /* symbiose_macos_centralApp.swift */; };
+		ABB1471B2977508000E9EF56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1471A2977508000E9EF56 /* ContentView.swift */; };
+		ABB1471D2977508100E9EF56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB1471C2977508100E9EF56 /* Assets.xcassets */; };
+		ABB147202977508100E9EF56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB1471F2977508100E9EF56 /* Preview Assets.xcassets */; };
+		ABB1472B2977508100E9EF56 /* symbiose_macos_centralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1472A2977508100E9EF56 /* symbiose_macos_centralTests.swift */; };
+		ABB147352977508100E9EF56 /* symbiose_macos_centralUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147342977508100E9EF56 /* symbiose_macos_centralUITests.swift */; };
+		ABB147372977508100E9EF56 /* symbiose_macos_centralUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147362977508100E9EF56 /* symbiose_macos_centralUITestsLaunchTests.swift */; };
+		ABB14758297753F800E9EF56 /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14744297753F800E9EF56 /* BLEController.swift */; };
+		ABB14759297753F800E9EF56 /* BLEManagerEsp1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14747297753F800E9EF56 /* BLEManagerEsp1.swift */; };
+		ABB1475A297753F800E9EF56 /* BLEObservableEsp1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14748297753F800E9EF56 /* BLEObservableEsp1.swift */; };
+		ABB1475B297753F800E9EF56 /* BLEObservableMac1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1474A297753F800E9EF56 /* BLEObservableMac1.swift */; };
+		ABB1475C297753F800E9EF56 /* BLEManagerMac1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1474B297753F800E9EF56 /* BLEManagerMac1.swift */; };
+		ABB1475D297753F800E9EF56 /* BLEUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1474C297753F800E9EF56 /* BLEUtils.swift */; };
+		ABB1475E297753F800E9EF56 /* BLEManagerEsp2_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1474F297753F800E9EF56 /* BLEManagerEsp2_3.swift */; };
+		ABB1475F297753F800E9EF56 /* BLEObservableEsp2_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14750297753F800E9EF56 /* BLEObservableEsp2_3.swift */; };
+		ABB14760297753F800E9EF56 /* BLEObservableMac3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14752297753F800E9EF56 /* BLEObservableMac3.swift */; };
+		ABB14761297753F800E9EF56 /* BLEManagerMac3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14753297753F800E9EF56 /* BLEManagerMac3.swift */; };
+		ABB14762297753F800E9EF56 /* BLEManagerEsp2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14756297753F800E9EF56 /* BLEManagerEsp2.swift */; };
+		ABB14763297753F800E9EF56 /* BLEObservableEsp2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14757297753F800E9EF56 /* BLEObservableEsp2.swift */; };
+		ABB1479E2977552500E9EF56 /* SpheroSensorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147652977552500E9EF56 /* SpheroSensorControl.swift */; };
+		ABB1479F2977552500E9EF56 /* SharedToyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147672977552500E9EF56 /* SharedToyBox.swift */; };
+		ABB147A02977552500E9EF56 /* SDKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147692977552500E9EF56 /* SDKUtils.swift */; };
+		ABB147A12977552500E9EF56 /* Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1476C2977552500E9EF56 /* Toy.swift */; };
+		ABB147A22977552500E9EF56 /* SensorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1476D2977552500E9EF56 /* SensorControl.swift */; };
+		ABB147A32977552500E9EF56 /* SPRKToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1476F2977552500E9EF56 /* SPRKToy.swift */; };
+		ABB147A42977552500E9EF56 /* SensorControlV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147702977552500E9EF56 /* SensorControlV1.swift */; };
+		ABB147A52977552500E9EF56 /* SpheroV1Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147712977552500E9EF56 /* SpheroV1Toy.swift */; };
+		ABB147A62977552500E9EF56 /* SpheroV1ToyCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147722977552500E9EF56 /* SpheroV1ToyCore.swift */; };
+		ABB147A72977552500E9EF56 /* BB8Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147732977552500E9EF56 /* BB8Toy.swift */; };
+		ABB147A82977552500E9EF56 /* SensorControlV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147752977552500E9EF56 /* SensorControlV2.swift */; };
+		ABB147A92977552500E9EF56 /* BB9EToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147762977552500E9EF56 /* BB9EToy.swift */; };
+		ABB147AA2977552500E9EF56 /* SpheroV2Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147772977552500E9EF56 /* SpheroV2Toy.swift */; };
+		ABB147AB2977552500E9EF56 /* BoltToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147782977552500E9EF56 /* BoltToy.swift */; };
+		ABB147AC2977552500E9EF56 /* R2D2Toy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147792977552500E9EF56 /* R2D2Toy.swift */; };
+		ABB147AD2977552500E9EF56 /* SpheroV2ToyCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1477A2977552500E9EF56 /* SpheroV2ToyCore.swift */; };
+		ABB147AE2977552500E9EF56 /* MiniToy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1477B2977552500E9EF56 /* MiniToy.swift */; };
+		ABB147AF2977552500E9EF56 /* ToyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1477C2977552500E9EF56 /* ToyProtocols.swift */; };
+		ABB147B02977552500E9EF56 /* CBUUID+SpheroUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1477D2977552500E9EF56 /* CBUUID+SpheroUUIDs.swift */; };
+		ABB147B12977552500E9EF56 /* ToyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1477F2977552500E9EF56 /* ToyBox.swift */; };
+		ABB147B22977552500E9EF56 /* Color+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147802977552500E9EF56 /* Color+Utils.swift */; };
+		ABB147B32977552500E9EF56 /* SensorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147822977552500E9EF56 /* SensorUtils.swift */; };
+		ABB147B42977552500E9EF56 /* CommandOperationV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147842977552500E9EF56 /* CommandOperationV2.swift */; };
+		ABB147B52977552500E9EF56 /* CommandSequencerV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147852977552500E9EF56 /* CommandSequencerV2.swift */; };
+		ABB147B62977552500E9EF56 /* CommandV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147862977552500E9EF56 /* CommandV2.swift */; };
+		ABB147B72977552500E9EF56 /* VersionsCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147882977552500E9EF56 /* VersionsCommandResponse.swift */; };
+		ABB147B82977552500E9EF56 /* ShouldActionCompleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147892977552500E9EF56 /* ShouldActionCompleteResponse.swift */; };
+		ABB147B92977552500E9EF56 /* SensorCommandResponseV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1478A2977552500E9EF56 /* SensorCommandResponseV2.swift */; };
+		ABB147BA2977552500E9EF56 /* SensorCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1478B2977552500E9EF56 /* SensorCommandResponse.swift */; };
+		ABB147BB2977552500E9EF56 /* SensorMaskCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1478C2977552500E9EF56 /* SensorMaskCommandResponse.swift */; };
+		ABB147BC2977552500E9EF56 /* PowerStateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1478D2977552500E9EF56 /* PowerStateResponse.swift */; };
+		ABB147BD2977552500E9EF56 /* CollisionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1478E2977552500E9EF56 /* CollisionData.swift */; };
+		ABB147BE2977552500E9EF56 /* CommandV1Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147902977552500E9EF56 /* CommandV1Operation.swift */; };
+		ABB147BF2977552500E9EF56 /* CommandV1Sequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147912977552500E9EF56 /* CommandV1Sequencer.swift */; };
+		ABB147C02977552500E9EF56 /* CommandV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147922977552500E9EF56 /* CommandV1.swift */; };
+		ABB147C12977552500E9EF56 /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147932977552500E9EF56 /* Double+Utils.swift */; };
+		ABB147C22977552500E9EF56 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147942977552500E9EF56 /* String+Utils.swift */; };
+		ABB147C32977552500E9EF56 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147962977552500E9EF56 /* Storage.swift */; };
+		ABB147C42977552500E9EF56 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147972977552500E9EF56 /* Random.swift */; };
+		ABB147C52977552500E9EF56 /* FFNN+Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147982977552500E9EF56 /* FFNN+Storage.swift */; };
+		ABB147C62977552500E9EF56 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147992977552500E9EF56 /* Vector.swift */; };
+		ABB147C72977552500E9EF56 /* FFNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1479A2977552500E9EF56 /* FFNN.swift */; };
+		ABB147C82977552500E9EF56 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1479B2977552500E9EF56 /* Operations.swift */; };
+		ABB147C92977552500E9EF56 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1479C2977552500E9EF56 /* Matrix.swift */; };
+		ABB147CA2977552500E9EF56 /* FFNN+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1479D2977552500E9EF56 /* FFNN+Metal.swift */; };
+		ABB147CD2977592500E9EF56 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147CC2977592500E9EF56 /* VideoManager.swift */; };
+		ABB147CF2977593200E9EF56 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147CE2977593200E9EF56 /* CustomVideoPlayer.swift */; };
+		ABB147D12977594400E9EF56 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB147D02977594000E9EF56 /* video.mp4 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABB147272977508100E9EF56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB1470D2977508000E9EF56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB147142977508000E9EF56;
+			remoteInfo = symbiose_macos_central;
+		};
+		ABB147312977508100E9EF56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB1470D2977508000E9EF56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB147142977508000E9EF56;
+			remoteInfo = symbiose_macos_central;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABB147152977508000E9EF56 /* symbiose_macos_central.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = symbiose_macos_central.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB147182977508000E9EF56 /* symbiose_macos_centralApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = symbiose_macos_centralApp.swift; sourceTree = "<group>"; };
+		ABB1471A2977508000E9EF56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ABB1471C2977508100E9EF56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABB1471F2977508100E9EF56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ABB147212977508100E9EF56 /* symbiose_macos_central.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = symbiose_macos_central.entitlements; sourceTree = "<group>"; };
+		ABB147262977508100E9EF56 /* symbiose_macos_centralTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = symbiose_macos_centralTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB1472A2977508100E9EF56 /* symbiose_macos_centralTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = symbiose_macos_centralTests.swift; sourceTree = "<group>"; };
+		ABB147302977508100E9EF56 /* symbiose_macos_centralUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = symbiose_macos_centralUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB147342977508100E9EF56 /* symbiose_macos_centralUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = symbiose_macos_centralUITests.swift; sourceTree = "<group>"; };
+		ABB147362977508100E9EF56 /* symbiose_macos_centralUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = symbiose_macos_centralUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ABB14744297753F800E9EF56 /* BLEController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
+		ABB14747297753F800E9EF56 /* BLEManagerEsp1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEsp1.swift; sourceTree = "<group>"; };
+		ABB14748297753F800E9EF56 /* BLEObservableEsp1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEsp1.swift; sourceTree = "<group>"; };
+		ABB1474A297753F800E9EF56 /* BLEObservableMac1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableMac1.swift; sourceTree = "<group>"; };
+		ABB1474B297753F800E9EF56 /* BLEManagerMac1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerMac1.swift; sourceTree = "<group>"; };
+		ABB1474C297753F800E9EF56 /* BLEUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEUtils.swift; sourceTree = "<group>"; };
+		ABB1474F297753F800E9EF56 /* BLEManagerEsp2_3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEsp2_3.swift; sourceTree = "<group>"; };
+		ABB14750297753F800E9EF56 /* BLEObservableEsp2_3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEsp2_3.swift; sourceTree = "<group>"; };
+		ABB14752297753F800E9EF56 /* BLEObservableMac3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableMac3.swift; sourceTree = "<group>"; };
+		ABB14753297753F800E9EF56 /* BLEManagerMac3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerMac3.swift; sourceTree = "<group>"; };
+		ABB14756297753F800E9EF56 /* BLEManagerEsp2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEsp2.swift; sourceTree = "<group>"; };
+		ABB14757297753F800E9EF56 /* BLEObservableEsp2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEsp2.swift; sourceTree = "<group>"; };
+		ABB147652977552500E9EF56 /* SpheroSensorControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheroSensorControl.swift; sourceTree = "<group>"; };
+		ABB147672977552500E9EF56 /* SharedToyBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedToyBox.swift; sourceTree = "<group>"; };
+		ABB147692977552500E9EF56 /* SDKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKUtils.swift; sourceTree = "<group>"; };
+		ABB1476C2977552500E9EF56 /* Toy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toy.swift; sourceTree = "<group>"; };
+		ABB1476D2977552500E9EF56 /* SensorControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorControl.swift; sourceTree = "<group>"; };
+		ABB1476F2977552500E9EF56 /* SPRKToy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPRKToy.swift; sourceTree = "<group>"; };
+		ABB147702977552500E9EF56 /* SensorControlV1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorControlV1.swift; sourceTree = "<group>"; };
+		ABB147712977552500E9EF56 /* SpheroV1Toy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheroV1Toy.swift; sourceTree = "<group>"; };
+		ABB147722977552500E9EF56 /* SpheroV1ToyCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheroV1ToyCore.swift; sourceTree = "<group>"; };
+		ABB147732977552500E9EF56 /* BB8Toy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BB8Toy.swift; sourceTree = "<group>"; };
+		ABB147752977552500E9EF56 /* SensorControlV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorControlV2.swift; sourceTree = "<group>"; };
+		ABB147762977552500E9EF56 /* BB9EToy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BB9EToy.swift; sourceTree = "<group>"; };
+		ABB147772977552500E9EF56 /* SpheroV2Toy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheroV2Toy.swift; sourceTree = "<group>"; };
+		ABB147782977552500E9EF56 /* BoltToy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoltToy.swift; sourceTree = "<group>"; };
+		ABB147792977552500E9EF56 /* R2D2Toy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2D2Toy.swift; sourceTree = "<group>"; };
+		ABB1477A2977552500E9EF56 /* SpheroV2ToyCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheroV2ToyCore.swift; sourceTree = "<group>"; };
+		ABB1477B2977552500E9EF56 /* MiniToy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniToy.swift; sourceTree = "<group>"; };
+		ABB1477C2977552500E9EF56 /* ToyProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyProtocols.swift; sourceTree = "<group>"; };
+		ABB1477D2977552500E9EF56 /* CBUUID+SpheroUUIDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CBUUID+SpheroUUIDs.swift"; sourceTree = "<group>"; };
+		ABB1477F2977552500E9EF56 /* ToyBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyBox.swift; sourceTree = "<group>"; };
+		ABB147802977552500E9EF56 /* Color+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Utils.swift"; sourceTree = "<group>"; };
+		ABB147822977552500E9EF56 /* SensorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorUtils.swift; sourceTree = "<group>"; };
+		ABB147842977552500E9EF56 /* CommandOperationV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandOperationV2.swift; sourceTree = "<group>"; };
+		ABB147852977552500E9EF56 /* CommandSequencerV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandSequencerV2.swift; sourceTree = "<group>"; };
+		ABB147862977552500E9EF56 /* CommandV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandV2.swift; sourceTree = "<group>"; };
+		ABB147882977552500E9EF56 /* VersionsCommandResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionsCommandResponse.swift; sourceTree = "<group>"; };
+		ABB147892977552500E9EF56 /* ShouldActionCompleteResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShouldActionCompleteResponse.swift; sourceTree = "<group>"; };
+		ABB1478A2977552500E9EF56 /* SensorCommandResponseV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorCommandResponseV2.swift; sourceTree = "<group>"; };
+		ABB1478B2977552500E9EF56 /* SensorCommandResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorCommandResponse.swift; sourceTree = "<group>"; };
+		ABB1478C2977552500E9EF56 /* SensorMaskCommandResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorMaskCommandResponse.swift; sourceTree = "<group>"; };
+		ABB1478D2977552500E9EF56 /* PowerStateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerStateResponse.swift; sourceTree = "<group>"; };
+		ABB1478E2977552500E9EF56 /* CollisionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionData.swift; sourceTree = "<group>"; };
+		ABB147902977552500E9EF56 /* CommandV1Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandV1Operation.swift; sourceTree = "<group>"; };
+		ABB147912977552500E9EF56 /* CommandV1Sequencer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandV1Sequencer.swift; sourceTree = "<group>"; };
+		ABB147922977552500E9EF56 /* CommandV1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandV1.swift; sourceTree = "<group>"; };
+		ABB147932977552500E9EF56 /* Double+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
+		ABB147942977552500E9EF56 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		ABB147962977552500E9EF56 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		ABB147972977552500E9EF56 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		ABB147982977552500E9EF56 /* FFNN+Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFNN+Storage.swift"; sourceTree = "<group>"; };
+		ABB147992977552500E9EF56 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		ABB1479A2977552500E9EF56 /* FFNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFNN.swift; sourceTree = "<group>"; };
+		ABB1479B2977552500E9EF56 /* Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		ABB1479C2977552500E9EF56 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		ABB1479D2977552500E9EF56 /* FFNN+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFNN+Metal.swift"; sourceTree = "<group>"; };
+		ABB147CC2977592500E9EF56 /* VideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		ABB147CE2977593200E9EF56 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
+		ABB147D02977594000E9EF56 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABB147122977508000E9EF56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB147232977508100E9EF56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB1472D2977508100E9EF56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABB1470C2977508000E9EF56 = {
+			isa = PBXGroup;
+			children = (
+				ABB147172977508000E9EF56 /* symbiose_macos_central */,
+				ABB147292977508100E9EF56 /* symbiose_macos_centralTests */,
+				ABB147332977508100E9EF56 /* symbiose_macos_centralUITests */,
+				ABB147162977508000E9EF56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABB147162977508000E9EF56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147152977508000E9EF56 /* symbiose_macos_central.app */,
+				ABB147262977508100E9EF56 /* symbiose_macos_centralTests.xctest */,
+				ABB147302977508100E9EF56 /* symbiose_macos_centralUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABB147172977508000E9EF56 /* symbiose_macos_central */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147CB297758E800E9EF56 /* video */,
+				ABB147642977552500E9EF56 /* Sphero */,
+				ABB14743297753F800E9EF56 /* BLE */,
+				ABB147182977508000E9EF56 /* symbiose_macos_centralApp.swift */,
+				ABB1471A2977508000E9EF56 /* ContentView.swift */,
+				ABB1471C2977508100E9EF56 /* Assets.xcassets */,
+				ABB147212977508100E9EF56 /* symbiose_macos_central.entitlements */,
+				ABB1471E2977508100E9EF56 /* Preview Content */,
+			);
+			path = symbiose_macos_central;
+			sourceTree = "<group>";
+		};
+		ABB1471E2977508100E9EF56 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1471F2977508100E9EF56 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ABB147292977508100E9EF56 /* symbiose_macos_centralTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1472A2977508100E9EF56 /* symbiose_macos_centralTests.swift */,
+			);
+			path = symbiose_macos_centralTests;
+			sourceTree = "<group>";
+		};
+		ABB147332977508100E9EF56 /* symbiose_macos_centralUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147342977508100E9EF56 /* symbiose_macos_centralUITests.swift */,
+				ABB147362977508100E9EF56 /* symbiose_macos_centralUITestsLaunchTests.swift */,
+			);
+			path = symbiose_macos_centralUITests;
+			sourceTree = "<group>";
+		};
+		ABB14743297753F800E9EF56 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				ABB14744297753F800E9EF56 /* BLEController.swift */,
+				ABB1474C297753F800E9EF56 /* BLEUtils.swift */,
+				ABB14745297753F800E9EF56 /* act1 */,
+				ABB1474D297753F800E9EF56 /* act3 */,
+				ABB14754297753F800E9EF56 /* act2 */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
+		ABB14745297753F800E9EF56 /* act1 */ = {
+			isa = PBXGroup;
+			children = (
+				ABB14746297753F800E9EF56 /* esp */,
+				ABB14749297753F800E9EF56 /* app */,
+			);
+			path = act1;
+			sourceTree = "<group>";
+		};
+		ABB14746297753F800E9EF56 /* esp */ = {
+			isa = PBXGroup;
+			children = (
+				ABB14747297753F800E9EF56 /* BLEManagerEsp1.swift */,
+				ABB14748297753F800E9EF56 /* BLEObservableEsp1.swift */,
+			);
+			path = esp;
+			sourceTree = "<group>";
+		};
+		ABB14749297753F800E9EF56 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1474A297753F800E9EF56 /* BLEObservableMac1.swift */,
+				ABB1474B297753F800E9EF56 /* BLEManagerMac1.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		ABB1474D297753F800E9EF56 /* act3 */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1474E297753F800E9EF56 /* esp */,
+				ABB14751297753F800E9EF56 /* app */,
+			);
+			path = act3;
+			sourceTree = "<group>";
+		};
+		ABB1474E297753F800E9EF56 /* esp */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1474F297753F800E9EF56 /* BLEManagerEsp2_3.swift */,
+				ABB14750297753F800E9EF56 /* BLEObservableEsp2_3.swift */,
+			);
+			path = esp;
+			sourceTree = "<group>";
+		};
+		ABB14751297753F800E9EF56 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				ABB14752297753F800E9EF56 /* BLEObservableMac3.swift */,
+				ABB14753297753F800E9EF56 /* BLEManagerMac3.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		ABB14754297753F800E9EF56 /* act2 */ = {
+			isa = PBXGroup;
+			children = (
+				ABB14755297753F800E9EF56 /* esp */,
+			);
+			path = act2;
+			sourceTree = "<group>";
+		};
+		ABB14755297753F800E9EF56 /* esp */ = {
+			isa = PBXGroup;
+			children = (
+				ABB14756297753F800E9EF56 /* BLEManagerEsp2.swift */,
+				ABB14757297753F800E9EF56 /* BLEObservableEsp2.swift */,
+			);
+			path = esp;
+			sourceTree = "<group>";
+		};
+		ABB147642977552500E9EF56 /* Sphero */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147652977552500E9EF56 /* SpheroSensorControl.swift */,
+				ABB147662977552500E9EF56 /* SpheroSDK */,
+				ABB147952977552500E9EF56 /* NeuralNet */,
+			);
+			path = Sphero;
+			sourceTree = "<group>";
+		};
+		ABB147662977552500E9EF56 /* SpheroSDK */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147672977552500E9EF56 /* SharedToyBox.swift */,
+				ABB147682977552500E9EF56 /* SDK */,
+			);
+			path = SpheroSDK;
+			sourceTree = "<group>";
+		};
+		ABB147682977552500E9EF56 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147692977552500E9EF56 /* SDKUtils.swift */,
+				ABB1476A2977552500E9EF56 /* BLE */,
+				ABB147802977552500E9EF56 /* Color+Utils.swift */,
+				ABB147812977552500E9EF56 /* Commands */,
+				ABB147932977552500E9EF56 /* Double+Utils.swift */,
+				ABB147942977552500E9EF56 /* String+Utils.swift */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		ABB1476A2977552500E9EF56 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1476B2977552500E9EF56 /* Toy */,
+				ABB1477D2977552500E9EF56 /* CBUUID+SpheroUUIDs.swift */,
+				ABB1477E2977552500E9EF56 /* ToyBox */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
+		ABB1476B2977552500E9EF56 /* Toy */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1476C2977552500E9EF56 /* Toy.swift */,
+				ABB1476D2977552500E9EF56 /* SensorControl.swift */,
+				ABB1476E2977552500E9EF56 /* V1Toys */,
+				ABB147742977552500E9EF56 /* V2Toys */,
+				ABB1477C2977552500E9EF56 /* ToyProtocols.swift */,
+			);
+			path = Toy;
+			sourceTree = "<group>";
+		};
+		ABB1476E2977552500E9EF56 /* V1Toys */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1476F2977552500E9EF56 /* SPRKToy.swift */,
+				ABB147702977552500E9EF56 /* SensorControlV1.swift */,
+				ABB147712977552500E9EF56 /* SpheroV1Toy.swift */,
+				ABB147722977552500E9EF56 /* SpheroV1ToyCore.swift */,
+				ABB147732977552500E9EF56 /* BB8Toy.swift */,
+			);
+			path = V1Toys;
+			sourceTree = "<group>";
+		};
+		ABB147742977552500E9EF56 /* V2Toys */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147752977552500E9EF56 /* SensorControlV2.swift */,
+				ABB147762977552500E9EF56 /* BB9EToy.swift */,
+				ABB147772977552500E9EF56 /* SpheroV2Toy.swift */,
+				ABB147782977552500E9EF56 /* BoltToy.swift */,
+				ABB147792977552500E9EF56 /* R2D2Toy.swift */,
+				ABB1477A2977552500E9EF56 /* SpheroV2ToyCore.swift */,
+				ABB1477B2977552500E9EF56 /* MiniToy.swift */,
+			);
+			path = V2Toys;
+			sourceTree = "<group>";
+		};
+		ABB1477E2977552500E9EF56 /* ToyBox */ = {
+			isa = PBXGroup;
+			children = (
+				ABB1477F2977552500E9EF56 /* ToyBox.swift */,
+			);
+			path = ToyBox;
+			sourceTree = "<group>";
+		};
+		ABB147812977552500E9EF56 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147822977552500E9EF56 /* SensorUtils.swift */,
+				ABB147832977552500E9EF56 /* CommandV2 */,
+				ABB147872977552500E9EF56 /* CommandResponses */,
+				ABB1478F2977552500E9EF56 /* CommandV1 */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		ABB147832977552500E9EF56 /* CommandV2 */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147842977552500E9EF56 /* CommandOperationV2.swift */,
+				ABB147852977552500E9EF56 /* CommandSequencerV2.swift */,
+				ABB147862977552500E9EF56 /* CommandV2.swift */,
+			);
+			path = CommandV2;
+			sourceTree = "<group>";
+		};
+		ABB147872977552500E9EF56 /* CommandResponses */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147882977552500E9EF56 /* VersionsCommandResponse.swift */,
+				ABB147892977552500E9EF56 /* ShouldActionCompleteResponse.swift */,
+				ABB1478A2977552500E9EF56 /* SensorCommandResponseV2.swift */,
+				ABB1478B2977552500E9EF56 /* SensorCommandResponse.swift */,
+				ABB1478C2977552500E9EF56 /* SensorMaskCommandResponse.swift */,
+				ABB1478D2977552500E9EF56 /* PowerStateResponse.swift */,
+				ABB1478E2977552500E9EF56 /* CollisionData.swift */,
+			);
+			path = CommandResponses;
+			sourceTree = "<group>";
+		};
+		ABB1478F2977552500E9EF56 /* CommandV1 */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147902977552500E9EF56 /* CommandV1Operation.swift */,
+				ABB147912977552500E9EF56 /* CommandV1Sequencer.swift */,
+				ABB147922977552500E9EF56 /* CommandV1.swift */,
+			);
+			path = CommandV1;
+			sourceTree = "<group>";
+		};
+		ABB147952977552500E9EF56 /* NeuralNet */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147962977552500E9EF56 /* Storage.swift */,
+				ABB147972977552500E9EF56 /* Random.swift */,
+				ABB147982977552500E9EF56 /* FFNN+Storage.swift */,
+				ABB147992977552500E9EF56 /* Vector.swift */,
+				ABB1479A2977552500E9EF56 /* FFNN.swift */,
+				ABB1479B2977552500E9EF56 /* Operations.swift */,
+				ABB1479C2977552500E9EF56 /* Matrix.swift */,
+				ABB1479D2977552500E9EF56 /* FFNN+Metal.swift */,
+			);
+			path = NeuralNet;
+			sourceTree = "<group>";
+		};
+		ABB147CB297758E800E9EF56 /* video */ = {
+			isa = PBXGroup;
+			children = (
+				ABB147D02977594000E9EF56 /* video.mp4 */,
+				ABB147CC2977592500E9EF56 /* VideoManager.swift */,
+				ABB147CE2977593200E9EF56 /* CustomVideoPlayer.swift */,
+			);
+			path = video;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABB147142977508000E9EF56 /* symbiose_macos_central */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB1473A2977508100E9EF56 /* Build configuration list for PBXNativeTarget "symbiose_macos_central" */;
+			buildPhases = (
+				ABB147112977508000E9EF56 /* Sources */,
+				ABB147122977508000E9EF56 /* Frameworks */,
+				ABB147132977508000E9EF56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = symbiose_macos_central;
+			productName = symbiose_macos_central;
+			productReference = ABB147152977508000E9EF56 /* symbiose_macos_central.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABB147252977508100E9EF56 /* symbiose_macos_centralTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB1473D2977508100E9EF56 /* Build configuration list for PBXNativeTarget "symbiose_macos_centralTests" */;
+			buildPhases = (
+				ABB147222977508100E9EF56 /* Sources */,
+				ABB147232977508100E9EF56 /* Frameworks */,
+				ABB147242977508100E9EF56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABB147282977508100E9EF56 /* PBXTargetDependency */,
+			);
+			name = symbiose_macos_centralTests;
+			productName = symbiose_macos_centralTests;
+			productReference = ABB147262977508100E9EF56 /* symbiose_macos_centralTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ABB1472F2977508100E9EF56 /* symbiose_macos_centralUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB147402977508100E9EF56 /* Build configuration list for PBXNativeTarget "symbiose_macos_centralUITests" */;
+			buildPhases = (
+				ABB1472C2977508100E9EF56 /* Sources */,
+				ABB1472D2977508100E9EF56 /* Frameworks */,
+				ABB1472E2977508100E9EF56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABB147322977508100E9EF56 /* PBXTargetDependency */,
+			);
+			name = symbiose_macos_centralUITests;
+			productName = symbiose_macos_centralUITests;
+			productReference = ABB147302977508100E9EF56 /* symbiose_macos_centralUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABB1470D2977508000E9EF56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					ABB147142977508000E9EF56 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					ABB147252977508100E9EF56 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = ABB147142977508000E9EF56;
+					};
+					ABB1472F2977508100E9EF56 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = ABB147142977508000E9EF56;
+					};
+				};
+			};
+			buildConfigurationList = ABB147102977508000E9EF56 /* Build configuration list for PBXProject "symbiose_macos_central" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABB1470C2977508000E9EF56;
+			productRefGroup = ABB147162977508000E9EF56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABB147142977508000E9EF56 /* symbiose_macos_central */,
+				ABB147252977508100E9EF56 /* symbiose_macos_centralTests */,
+				ABB1472F2977508100E9EF56 /* symbiose_macos_centralUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABB147132977508000E9EF56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB147202977508100E9EF56 /* Preview Assets.xcassets in Resources */,
+				ABB147D12977594400E9EF56 /* video.mp4 in Resources */,
+				ABB1471D2977508100E9EF56 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB147242977508100E9EF56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB1472E2977508100E9EF56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABB147112977508000E9EF56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB147A62977552500E9EF56 /* SpheroV1ToyCore.swift in Sources */,
+				ABB147A52977552500E9EF56 /* SpheroV1Toy.swift in Sources */,
+				ABB147B62977552500E9EF56 /* CommandV2.swift in Sources */,
+				ABB1471B2977508000E9EF56 /* ContentView.swift in Sources */,
+				ABB14760297753F800E9EF56 /* BLEObservableMac3.swift in Sources */,
+				ABB147C72977552500E9EF56 /* FFNN.swift in Sources */,
+				ABB147B42977552500E9EF56 /* CommandOperationV2.swift in Sources */,
+				ABB147A02977552500E9EF56 /* SDKUtils.swift in Sources */,
+				ABB147B72977552500E9EF56 /* VersionsCommandResponse.swift in Sources */,
+				ABB147C82977552500E9EF56 /* Operations.swift in Sources */,
+				ABB147C02977552500E9EF56 /* CommandV1.swift in Sources */,
+				ABB147192977508000E9EF56 /* symbiose_macos_centralApp.swift in Sources */,
+				ABB147B22977552500E9EF56 /* Color+Utils.swift in Sources */,
+				ABB1475C297753F800E9EF56 /* BLEManagerMac1.swift in Sources */,
+				ABB147C62977552500E9EF56 /* Vector.swift in Sources */,
+				ABB14759297753F800E9EF56 /* BLEManagerEsp1.swift in Sources */,
+				ABB147AA2977552500E9EF56 /* SpheroV2Toy.swift in Sources */,
+				ABB147A22977552500E9EF56 /* SensorControl.swift in Sources */,
+				ABB147B12977552500E9EF56 /* ToyBox.swift in Sources */,
+				ABB147A12977552500E9EF56 /* Toy.swift in Sources */,
+				ABB1475F297753F800E9EF56 /* BLEObservableEsp2_3.swift in Sources */,
+				ABB147B52977552500E9EF56 /* CommandSequencerV2.swift in Sources */,
+				ABB14758297753F800E9EF56 /* BLEController.swift in Sources */,
+				ABB147B32977552500E9EF56 /* SensorUtils.swift in Sources */,
+				ABB147BF2977552500E9EF56 /* CommandV1Sequencer.swift in Sources */,
+				ABB14762297753F800E9EF56 /* BLEManagerEsp2.swift in Sources */,
+				ABB147AF2977552500E9EF56 /* ToyProtocols.swift in Sources */,
+				ABB14763297753F800E9EF56 /* BLEObservableEsp2.swift in Sources */,
+				ABB147C32977552500E9EF56 /* Storage.swift in Sources */,
+				ABB147A32977552500E9EF56 /* SPRKToy.swift in Sources */,
+				ABB147BE2977552500E9EF56 /* CommandV1Operation.swift in Sources */,
+				ABB1479F2977552500E9EF56 /* SharedToyBox.swift in Sources */,
+				ABB147C52977552500E9EF56 /* FFNN+Storage.swift in Sources */,
+				ABB147A92977552500E9EF56 /* BB9EToy.swift in Sources */,
+				ABB147AD2977552500E9EF56 /* SpheroV2ToyCore.swift in Sources */,
+				ABB147A42977552500E9EF56 /* SensorControlV1.swift in Sources */,
+				ABB147CA2977552500E9EF56 /* FFNN+Metal.swift in Sources */,
+				ABB147BC2977552500E9EF56 /* PowerStateResponse.swift in Sources */,
+				ABB147B92977552500E9EF56 /* SensorCommandResponseV2.swift in Sources */,
+				ABB147AC2977552500E9EF56 /* R2D2Toy.swift in Sources */,
+				ABB1475D297753F800E9EF56 /* BLEUtils.swift in Sources */,
+				ABB147C22977552500E9EF56 /* String+Utils.swift in Sources */,
+				ABB147B82977552500E9EF56 /* ShouldActionCompleteResponse.swift in Sources */,
+				ABB1475B297753F800E9EF56 /* BLEObservableMac1.swift in Sources */,
+				ABB147AB2977552500E9EF56 /* BoltToy.swift in Sources */,
+				ABB14761297753F800E9EF56 /* BLEManagerMac3.swift in Sources */,
+				ABB147BD2977552500E9EF56 /* CollisionData.swift in Sources */,
+				ABB147CD2977592500E9EF56 /* VideoManager.swift in Sources */,
+				ABB1479E2977552500E9EF56 /* SpheroSensorControl.swift in Sources */,
+				ABB147A82977552500E9EF56 /* SensorControlV2.swift in Sources */,
+				ABB1475A297753F800E9EF56 /* BLEObservableEsp1.swift in Sources */,
+				ABB147BA2977552500E9EF56 /* SensorCommandResponse.swift in Sources */,
+				ABB147C12977552500E9EF56 /* Double+Utils.swift in Sources */,
+				ABB147B02977552500E9EF56 /* CBUUID+SpheroUUIDs.swift in Sources */,
+				ABB147C42977552500E9EF56 /* Random.swift in Sources */,
+				ABB147CF2977593200E9EF56 /* CustomVideoPlayer.swift in Sources */,
+				ABB1475E297753F800E9EF56 /* BLEManagerEsp2_3.swift in Sources */,
+				ABB147A72977552500E9EF56 /* BB8Toy.swift in Sources */,
+				ABB147BB2977552500E9EF56 /* SensorMaskCommandResponse.swift in Sources */,
+				ABB147C92977552500E9EF56 /* Matrix.swift in Sources */,
+				ABB147AE2977552500E9EF56 /* MiniToy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB147222977508100E9EF56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB1472B2977508100E9EF56 /* symbiose_macos_centralTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB1472C2977508100E9EF56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB147352977508100E9EF56 /* symbiose_macos_centralUITests.swift in Sources */,
+				ABB147372977508100E9EF56 /* symbiose_macos_centralUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABB147282977508100E9EF56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABB147142977508000E9EF56 /* symbiose_macos_central */;
+			targetProxy = ABB147272977508100E9EF56 /* PBXContainerItemProxy */;
+		};
+		ABB147322977508100E9EF56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABB147142977508000E9EF56 /* symbiose_macos_central */;
+			targetProxy = ABB147312977508100E9EF56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ABB147382977508100E9EF56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABB147392977508100E9EF56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		ABB1473B2977508100E9EF56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = symbiose_macos_central/symbiose_macos_central.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"symbiose_macos_central/Preview Content\"";
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = ble;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.symbiose-macos-central";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ABB1473C2977508100E9EF56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = symbiose_macos_central/symbiose_macos_central.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"symbiose_macos_central/Preview Content\"";
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = ble;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.symbiose-macos-central";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ABB1473E2977508100E9EF56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.symbiose-macos-centralTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/symbiose_macos_central.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/symbiose_macos_central";
+			};
+			name = Debug;
+		};
+		ABB1473F2977508100E9EF56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.symbiose-macos-centralTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/symbiose_macos_central.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/symbiose_macos_central";
+			};
+			name = Release;
+		};
+		ABB147412977508100E9EF56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.symbiose-macos-centralUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = symbiose_macos_central;
+			};
+			name = Debug;
+		};
+		ABB147422977508100E9EF56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6V8Z3B326L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonathan.symbiose-macos-centralUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = symbiose_macos_central;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABB147102977508000E9EF56 /* Build configuration list for PBXProject "symbiose_macos_central" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB147382977508100E9EF56 /* Debug */,
+				ABB147392977508100E9EF56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB1473A2977508100E9EF56 /* Build configuration list for PBXNativeTarget "symbiose_macos_central" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB1473B2977508100E9EF56 /* Debug */,
+				ABB1473C2977508100E9EF56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB1473D2977508100E9EF56 /* Build configuration list for PBXNativeTarget "symbiose_macos_centralTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB1473E2977508100E9EF56 /* Debug */,
+				ABB1473F2977508100E9EF56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB147402977508100E9EF56 /* Build configuration list for PBXNativeTarget "symbiose_macos_centralUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB147412977508100E9EF56 /* Debug */,
+				ABB147422977508100E9EF56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABB1470D2977508000E9EF56 /* Project object */;
+}
