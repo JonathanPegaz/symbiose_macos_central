@@ -13,7 +13,7 @@ class BLEController: NSViewController,CBPeripheralManagerDelegate, ObservableObj
     @Published var writeValueLabel: String = ""
     @Published var data: String = ""
     
-    @Published var bleStatus: Bool = false
+    @Published var active: Bool = false
     
     let authCBUUID = CBUUID(string: "B85C752C-80CD-473C-BFE4-1756E1B50275")
     let writeCBUUID = CBUUID(string: "35DE80EA-FFC1-4947-B1A1-594AE803CA6A")
@@ -41,7 +41,7 @@ class BLEController: NSViewController,CBPeripheralManagerDelegate, ObservableObj
             print("Bluetooth Device is POWERED OFF")
         case .poweredOn:
             print("Bluetooth Device is POWERED ON")
-            self.bleStatus = true
+            self.active = true
         @unknown default:
             fatalError()
         }

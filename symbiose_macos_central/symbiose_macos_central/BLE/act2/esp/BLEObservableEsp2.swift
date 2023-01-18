@@ -22,7 +22,7 @@ class BLEObservableEsp2:ObservableObject{
     @Published var rfid1: Bool = false
     @Published var rfid2: Bool = false
     @Published var rfid3: Bool = false
-    
+        
     @Published var esp2value: String = ""
     
     init(){
@@ -34,14 +34,8 @@ class BLEObservableEsp2:ObservableObject{
             let periph = Periph(blePeriph: p,name: s)
             
             if periph.name == "esp2"{
-//                if !self.periphList.contains(where: { per in
-//                    per.blePeriph == periph.blePeriph
-//                }) {
-//                    self.periphList.append(periph)
-//                }
                 self.connectTo(p: periph)
                 self.stopScann()
-                
             }
             
         }

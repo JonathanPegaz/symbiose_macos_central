@@ -18,7 +18,7 @@ class BLEObservableEsp2_3:ObservableObject{
     @Published var connectedPeripheral:Periph? = nil
     @Published var connectionState:ConnectionState = .disconnected
     @Published var dataReceived:[DataReceived] = []
-    
+        
     @Published var esp2_3Status: String = ""
     
     init(){
@@ -30,11 +30,6 @@ class BLEObservableEsp2_3:ObservableObject{
             let periph = Periph(blePeriph: p,name: s)
             
             if periph.name == "esp2&3"{
-//                if !self.periphList.contains(where: { per in
-//                    per.blePeriph == periph.blePeriph
-//                }) {
-//                    self.periphList.append(periph)
-//                }
                 self.connectTo(p: periph)
                 self.stopScann()
             }

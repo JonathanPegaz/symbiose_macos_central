@@ -18,7 +18,7 @@ class BLEObservableMac1:ObservableObject{
     @Published var connectedPeripheral:Periph? = nil
     @Published var connectionState:ConnectionState = .disconnected
     @Published var dataReceived:[DataReceived] = []
-    
+        
     @Published var mac1value: String = ""
     
     init(){
@@ -31,7 +31,6 @@ class BLEObservableMac1:ObservableObject{
             if periph.name == "symbioseact1"{
                 self.connectTo(p: periph)
                 self.stopScann()
-                
             }
             
         }

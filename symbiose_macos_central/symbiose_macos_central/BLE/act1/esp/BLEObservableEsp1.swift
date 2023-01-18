@@ -18,7 +18,7 @@ class BLEObservableEsp1:ObservableObject{
     @Published var connectedPeripheral:Periph? = nil
     @Published var connectionState:ConnectionState = .disconnected
     @Published var dataReceived:[DataReceived] = []
-    
+        
     @Published var esp1Status:String = ""
     
     init(){
@@ -31,7 +31,6 @@ class BLEObservableEsp1:ObservableObject{
             if periph.name == "esp1"{
                 self.connectTo(p: periph)
                 self.stopScann()
-                
             }
             
         }
