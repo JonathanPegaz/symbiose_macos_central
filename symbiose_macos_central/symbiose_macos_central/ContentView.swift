@@ -228,6 +228,7 @@ struct ContentView: View {
             case StepState.startAct2:
                 print("step \(newValue) : start act 2")
                 // start led
+                BLEesp1.sendString(str: "next_act")
                 BLEesp2_3.sendString(str: "runningAct2")
                 
             case StepState.waitingEndAct2:
@@ -256,6 +257,7 @@ struct ContentView: View {
             case StepState.startAct3:
                 print("step \(newValue) : start act 3")
                 // start led
+                BLEesp1.sendString(str: "next_act_2")
                 BLEesp2_3.sendString(str: "runningAct3")
                 // start activity 3
                 BLEmac3.sendString(str: "start")
@@ -279,6 +281,7 @@ struct ContentView: View {
             // end block
             // ---------------
             case StepState.end:
+                BLEesp1.sendString(str: "next_act_3")
                 print("end")
                 // #code ...
                 
