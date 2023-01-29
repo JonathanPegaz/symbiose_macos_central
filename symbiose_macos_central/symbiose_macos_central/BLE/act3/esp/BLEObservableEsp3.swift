@@ -1,14 +1,14 @@
 //
-//  BLEObservableAct1.swift
-//  Symbiose
+//  BLEObservable.swift
+//  SwiftUI_BLE
 //
-//  Created by Jonathan Pegaz on 27/12/2022.
+//  Created by Al on 26/10/2022.
 //
 
 import Foundation
 import CoreBluetooth
 
-class BLEObservableMac3:ObservableObject{
+class BLEObservableEsp3:ObservableObject{
     
     enum ConnectionState {
         case disconnected,connecting,discovering,ready
@@ -19,16 +19,17 @@ class BLEObservableMac3:ObservableObject{
     @Published var connectionState:ConnectionState = .disconnected
     @Published var dataReceived:[DataReceived] = []
         
-    @Published var mac3value: String = ""
+    @Published var esp3value: String = ""
     
     init(){
-        _ = BLEManagerMac3.instance
+        _ = BLEManagerEsp3.instance
     }
     
     func startScann(){
-        BLEManagerMac3.instance.scan { p,s in
+        BLEManagerEsp3.instance.scan { p,s in
             let periph = Periph(blePeriph: p,name: s)
-            if periph.name == "symbiose_macos_act3" {
+            
+            if periph.name == "esp_led_3"{
                 self.connectTo(p: periph)
                 self.stopScann()
             }
@@ -37,19 +38,19 @@ class BLEObservableMac3:ObservableObject{
     }
     
     func stopScann(){
-        BLEManagerMac3.instance.stopScan()
+        BLEManagerEsp3.instance.stopScan()
     }
     
     func connectTo(p:Periph){
         connectionState = .connecting
-        BLEManagerMac3.instance.connectPeripheral(p.blePeriph) { cbPeriph in
+        BLEManagerEsp3.instance.connectPeripheral(p.blePeriph) { cbPeriph in
             self.connectionState = .discovering
-            BLEManagerMac3.instance.discoverPeripheral(cbPeriph) { cbPeriphh in
+            BLEManagerEsp3.instance.discoverPeripheral(cbPeriph) { cbPeriphh in
                 self.connectionState = .ready
                 self.connectedPeripheral = p
             }
         }
-        BLEManagerMac3.instance.didDisconnectPeripheral { cbPeriph in
+        BLEManagerEsp3.instance.didDisconnectPeripheral { cbPeriph in
             if self.connectedPeripheral?.blePeriph == cbPeriph{
                 self.connectionState = .disconnected
                 self.connectedPeripheral = nil
@@ -59,7 +60,7 @@ class BLEObservableMac3:ObservableObject{
     
     func disconnectFrom(p:Periph){
         
-        BLEManagerMac3.instance.disconnectPeripheral(p.blePeriph) { cbPeriph in
+        BLEManagerEsp3.instance.disconnectPeripheral(p.blePeriph) { cbPeriph in
             if self.connectedPeripheral?.blePeriph == cbPeriph{
                 self.connectionState = .disconnected
                 self.connectedPeripheral = nil
@@ -72,7 +73,7 @@ class BLEObservableMac3:ObservableObject{
         
         let dataFromString = str.data(using: .utf8)!
         
-        BLEManagerMac3.instance.sendData(data: dataFromString) { c in
+        BLEManagerEsp3.instance.sendData(data: dataFromString) { c in
             
         }
     }
@@ -82,24 +83,26 @@ class BLEObservableMac3:ObservableObject{
         let data = Data(d)
         let dataFromString = String("Toto").data(using: .utf8)
         
-        BLEManagerMac3.instance.sendData(data: data) { c in
+        BLEManagerEsp3.instance.sendData(data: data) { c in
             
         }
     }
     
     func readData(){
-        BLEManagerMac3.instance.readData()
+        BLEManagerEsp3.instance.readData()
     }
     
     func listen(c:((String)->())){
         
-        BLEManagerMac3.instance.listenForMessages { data in
+        BLEManagerEsp3.instance.listenForMessages { data in
             
             if let d = data{
                 if let str = String(data: d, encoding: .utf8) {
-                    self.mac3value = str
+                    print(str)
+                    self.esp3value = str
                 }
             }
+
         }
         
     }

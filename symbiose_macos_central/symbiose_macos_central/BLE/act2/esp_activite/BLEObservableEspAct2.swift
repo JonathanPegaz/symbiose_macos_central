@@ -8,7 +8,7 @@
 import Foundation
 import CoreBluetooth
 
-class BLEObservableEsp2_3:ObservableObject{
+class BLEObservableEspAct2:ObservableObject{
     
     enum ConnectionState {
         case disconnected,connecting,discovering,ready
@@ -18,18 +18,22 @@ class BLEObservableEsp2_3:ObservableObject{
     @Published var connectedPeripheral:Periph? = nil
     @Published var connectionState:ConnectionState = .disconnected
     @Published var dataReceived:[DataReceived] = []
-        
-    @Published var esp2_3Status: String = ""
+    
+    @Published var rfid1: Bool = false
+    @Published var rfid2: Bool = false
+    @Published var rfid3: Bool = false
+    
+    @Published var esp2value: String = ""
     
     init(){
-        _ = BLEManagerEsp2_3.instance
+        _ = BLEManagerEspAct2.instance
     }
     
     func startScann(){
-        BLEManagerEsp2_3.instance.scan { p,s in
+        BLEManagerEspAct2.instance.scan { p,s in
             let periph = Periph(blePeriph: p,name: s)
             
-            if periph.name == "esp2&3"{
+            if periph.name == "esp2"{
                 self.connectTo(p: periph)
                 self.stopScann()
             }
@@ -38,19 +42,19 @@ class BLEObservableEsp2_3:ObservableObject{
     }
     
     func stopScann(){
-        BLEManagerEsp2_3.instance.stopScan()
+        BLEManagerEspAct2.instance.stopScan()
     }
     
     func connectTo(p:Periph){
         connectionState = .connecting
-        BLEManagerEsp2_3.instance.connectPeripheral(p.blePeriph) { cbPeriph in
+        BLEManagerEspAct2.instance.connectPeripheral(p.blePeriph) { cbPeriph in
             self.connectionState = .discovering
-            BLEManagerEsp2_3.instance.discoverPeripheral(cbPeriph) { cbPeriphh in
+            BLEManagerEspAct2.instance.discoverPeripheral(cbPeriph) { cbPeriphh in
                 self.connectionState = .ready
                 self.connectedPeripheral = p
             }
         }
-        BLEManagerEsp2_3.instance.didDisconnectPeripheral { cbPeriph in
+        BLEManagerEspAct2.instance.didDisconnectPeripheral { cbPeriph in
             if self.connectedPeripheral?.blePeriph == cbPeriph{
                 self.connectionState = .disconnected
                 self.connectedPeripheral = nil
@@ -60,7 +64,7 @@ class BLEObservableEsp2_3:ObservableObject{
     
     func disconnectFrom(p:Periph){
         
-        BLEManagerEsp2_3.instance.disconnectPeripheral(p.blePeriph) { cbPeriph in
+        BLEManagerEspAct2.instance.disconnectPeripheral(p.blePeriph) { cbPeriph in
             if self.connectedPeripheral?.blePeriph == cbPeriph{
                 self.connectionState = .disconnected
                 self.connectedPeripheral = nil
@@ -73,7 +77,7 @@ class BLEObservableEsp2_3:ObservableObject{
         
         let dataFromString = str.data(using: .utf8)!
         
-        BLEManagerEsp2_3.instance.sendData(data: dataFromString) { c in
+        BLEManagerEspAct2.instance.sendData(data: dataFromString) { c in
             
         }
     }
@@ -83,26 +87,39 @@ class BLEObservableEsp2_3:ObservableObject{
         let data = Data(d)
         let dataFromString = String("Toto").data(using: .utf8)
         
-        BLEManagerEsp2_3.instance.sendData(data: data) { c in
+        BLEManagerEspAct2.instance.sendData(data: data) { c in
             
         }
     }
     
     func readData(){
-        BLEManagerEsp2_3.instance.readData()
+        BLEManagerEspAct2.instance.readData()
     }
     
     func listen(c:((String)->())){
         
-        BLEManagerEsp2_3.instance.listenForMessages { data in
+        BLEManagerEspAct2.instance.listenForMessages { data in
             
             if let d = data{
                 if let str = String(data: d, encoding: .utf8) {
                     print(str)
-                    self.esp2_3Status = str
+                    switch str {
+                    case "rfid1":
+                        self.rfid1 = true
+                    case "rfid2":
+                        self.rfid2 = true
+                    case "rfid3":
+                        self.rfid3 = true
+                    default:
+                        print(str)
+                    }
+                    
+                    if (self.rfid1 && self.rfid2 && self.rfid3) {
+                        self.esp2value = "endAct2"
+                        print("endAct2")
+                    }
                 }
             }
-
         }
         
     }

@@ -43,22 +43,27 @@ struct ContentView: View {
     
     @StateObject var bleController : BLEController = BLEController()
     
-    @StateObject var BLEmac1 = BLEObservableMac1()
-    @StateObject var BLEmac3 = BLEObservableMac3()
+    @StateObject var BLEmacAct1 = BLEObservableMac1()
+    @StateObject var BLEespAct2:BLEObservableEspAct2 = BLEObservableEspAct2()
+    @StateObject var BLEmacAct3 = BLEObservableMac3()
     @StateObject var BLEesp1:BLEObservableEsp1 = BLEObservableEsp1()
     @StateObject var BLEesp2:BLEObservableEsp2 = BLEObservableEsp2()
-    @StateObject var BLEesp2_3:BLEObservableEsp2_3 = BLEObservableEsp2_3()
+    @StateObject var BLEesp3:BLEObservableEsp3 = BLEObservableEsp3()
     
     @State var step:StepState = StepState.reset
     @State var isWaitingForNext:Bool = false
 
     func checkIfReady() {
-        
-        if BLEmac1.connectedPeripheral == nil {
+                
+        if BLEmacAct1.connectedPeripheral == nil {
             return;
         }
         
-        if BLEmac3.connectedPeripheral == nil {
+        if BLEespAct2.connectedPeripheral == nil {
+            return;
+        }
+        
+        if BLEmacAct3.connectedPeripheral == nil {
             return;
         }
         
@@ -70,7 +75,7 @@ struct ContentView: View {
             return;
         }
         
-        if BLEesp2_3.connectedPeripheral == nil {
+        if BLEesp3.connectedPeripheral == nil {
             return;
         }
         
@@ -90,20 +95,32 @@ struct ContentView: View {
         }
         
         // action on connected
-        .onChange(of: BLEmac1.connectedPeripheral) { newValue in
+        .onChange(of: BLEmacAct1.connectedPeripheral) { newValue in
             if let p = newValue {
                 checkIfReady()
-                BLEmac1.sendString(str: "reset")
-                BLEmac1.listen { r in
+                print("mac act 1 : connecté")
+                BLEmacAct1.sendString(str: "reset")
+                BLEmacAct1.listen { r in
                     print(r)
                 }
             }
         }
-        .onChange(of: BLEmac3.connectedPeripheral) { newValue in
+        .onChange(of: BLEespAct2.connectedPeripheral, perform: { newValue in
             if let p = newValue{
                 checkIfReady()
-                BLEmac3.sendString(str: "reset")
-                BLEmac3.listen { r in
+                print("esp act 2 : connecté")
+                BLEespAct2.sendString(str: "reset")
+                BLEespAct2.listen { r in
+                    print(r)
+                }
+            }
+        })
+        .onChange(of: BLEmacAct3.connectedPeripheral) { newValue in
+            if let p = newValue{
+                checkIfReady()
+                print("mac act 3 : connecté")
+                BLEmacAct3.sendString(str: "reset")
+                BLEmacAct3.listen { r in
                     print(r)
                 }
             }
@@ -111,6 +128,7 @@ struct ContentView: View {
         .onChange(of: BLEesp1.connectedPeripheral, perform: { newValue in
             if let p = newValue{
                 checkIfReady()
+                print("led act 1 : connecté")
                 BLEesp1.sendString(str: "reset")
                 BLEesp1.listen { r in
                     print(r)
@@ -119,17 +137,20 @@ struct ContentView: View {
         })
         .onChange(of: BLEesp2.connectedPeripheral) { newValue in
             if let p = newValue{
+                print("led act 2 : connecté")
                 checkIfReady()
+                BLEesp2.sendString(str: "reset")
                 BLEesp2.listen { r in
                     print(r)
                 }
             }
         }
-        .onChange(of: BLEesp2_3.connectedPeripheral) { newValue in
+        .onChange(of: BLEesp3.connectedPeripheral) { newValue in
             if let p = newValue{
                 checkIfReady()
-                BLEesp2_3.sendString(str: "reset")
-                BLEesp2_3.listen { r in
+                print("led act 3 : connecté")
+                BLEesp3.sendString(str: "reset")
+                BLEesp3.listen { r in
                     print(r)
                 }
             }
@@ -138,16 +159,19 @@ struct ContentView: View {
         // start bluetooth connection
         .onChange(of: bleController.active) { newValue in
             SharedToyBox.instance.searchForBoltsNamed(["SB-92B2"]) { err in
-                if err == nil && newValue == false {
+                if err == nil {
+                    
+                    print("load all")
                     
                     spheroSensorController.load()
                     
-                    BLEmac1.startScann()
-                    BLEmac3.startScann()
+                    BLEmacAct1.startScann()
+                    BLEespAct2.startScann()
+                    BLEmacAct3.startScann()
                     
                     BLEesp1.startScann()
                     BLEesp2.startScann()
-                    BLEesp2_3.startScann()
+                    BLEesp3.startScann()
                 }
             }
         }
@@ -156,7 +180,10 @@ struct ContentView: View {
         .onChange(of: spheroSensorController.isShaking, perform: { newValue in
             if (newValue == true) {
                 if(isWaitingForNext && step.rawValue < StepState.end.rawValue) {
+                    print("next step")
                     step = StepState(rawValue: step.rawValue + 1)!
+                    print(step)
+                    isWaitingForNext = false
                 }
             }
         })
@@ -183,9 +210,7 @@ struct ContentView: View {
                 print("step \(newValue) : start mapping")
                 // start mapping
                 videoManager.changeStep(step: 1)
-                // if mapping is looping, next step
-                // #code ...
-                
+                step = StepState.waitingStartAct1
                 
             // ---------------
             // act 1 block
@@ -200,20 +225,20 @@ struct ContentView: View {
                 // start led
                 BLEesp1.sendString(str: "running")
                 // start activity 1
-                BLEmac1.sendString(str: "start")
+                BLEmacAct1.sendString(str: "start")
                 
             case StepState.waitingEndAct1:
                 print("step \(newValue) : waiting for act 1 end")
                 
             case StepState.waitingMappingEndAct1:
-                print("step \(newValue) : waiting for start mapping end act 1")
+                print("step \(newValue) : waiting for mapping end act 1")
                 // waiting for sphero checked
+                BLEesp1.sendString(str: "end")
                 isWaitingForNext = true
                 
             case StepState.startMappingEndAct1:
                 print("step \(newValue) : mapping end act 1")
                 // start mapping
-                BLEesp1.sendString(str: "end")
                 videoManager.changeStep(step: 2)
                 
                 
@@ -228,21 +253,21 @@ struct ContentView: View {
             case StepState.startAct2:
                 print("step \(newValue) : start act 2")
                 // start led
-                BLEesp1.sendString(str: "next_act")
-                BLEesp2_3.sendString(str: "runningAct2")
+                BLEesp1.sendString(str: "next")
+                BLEesp2.sendString(str: "running")
                 
             case StepState.waitingEndAct2:
                 print("step \(newValue) : waiting for act 2 end")
                 
             case StepState.waitingMappingEndAct2:
-                print("step \(newValue) : waiting for start mapping end act 2")
+                print("step \(newValue) : waiting for mapping end act 2")
                 // waiting for sphero checked
+                BLEesp2.sendString(str: "end")
                 isWaitingForNext = true
                 
             case StepState.startMappingEndAct2:
                 print("step \(newValue) : mapping end act 2")
                 // start mapping
-                BLEesp2_3.sendString(str: "endact2")
                 videoManager.changeStep(step: 3)
                 
                 
@@ -257,23 +282,23 @@ struct ContentView: View {
             case StepState.startAct3:
                 print("step \(newValue) : start act 3")
                 // start led
-                BLEesp1.sendString(str: "next_act_2")
-                BLEesp2_3.sendString(str: "runningAct3")
+                BLEesp2.sendString(str: "next")
+                BLEesp3.sendString(str: "running")
                 // start activity 3
-                BLEmac3.sendString(str: "start")
+                BLEmacAct3.sendString(str: "start")
                 
             case StepState.waitingEndAct3:
                 print("step \(newValue) : waiting for act 3 end")
                 
             case StepState.waitingMappingEndAct3:
-                print("step \(newValue) : waiting for start mapping end act 3")
+                print("step \(newValue) : waiting for mapping end act 3")
                 // waiting for sphero checked
+                BLEesp3.sendString(str: "end")
                 isWaitingForNext = true
                 
             case StepState.startMappingEndAct3:
                 print("step \(newValue) : mapping end act 3")
                 // start mapping
-                BLEesp2_3.sendString(str: "endact3")
                 videoManager.changeStep(step: 4)
                 
                 
@@ -281,9 +306,8 @@ struct ContentView: View {
             // end block
             // ---------------
             case StepState.end:
-                BLEesp1.sendString(str: "next_act_3")
+                BLEesp3.sendString(str: "next")
                 print("end")
-                // #code ...
                 
             }
             
@@ -291,43 +315,43 @@ struct ContentView: View {
         
         // manage video mapping
         .onChange(of: videoManager.currentTime) { newValue in
-            
-            if (newValue > 4 && step == StepState.startMappingEndAct1) {
-                step = StepState.waitingStartAct1
-            }
-            
-            if (newValue > 12 && step == StepState.startMappingEndAct2) {
+                        
+            if (step == StepState.startMappingEndAct1) {
                 step = StepState.waitingStartAct2
             }
             
-            if (newValue > 19 && step == StepState.startMappingEndAct3) {
+            if (step == StepState.startMappingEndAct2) {
                 step = StepState.waitingStartAct3
+            }
+            
+            if (step == StepState.startMappingEndAct3) {
+                print("end")
             }
         }
         
         // get end of activity
-        .onChange(of: BLEmac1.mac1value, perform: { newValue in
+        .onChange(of: BLEmacAct1.mac1value, perform: { newValue in
             if (newValue == "endact1") {
                 step = StepState.waitingMappingEndAct1
             }
         })
-        .onChange(of: BLEesp2.esp2value) { newValue in
-            if (newValue == "endact2") {
+        .onChange(of: BLEespAct2.esp2value, perform: { newValue in
+            if (newValue == "endAct2") {
                 step = StepState.waitingMappingEndAct2
             }
-        }
-        .onChange(of: BLEmac3.mac3value, perform: { newValue in
+        })
+        .onChange(of: BLEmacAct3.mac3value, perform: { newValue in
             if (newValue == "endact3") {
                 step = StepState.waitingMappingEndAct3
             }
         })
         
         // act 2 rfid
-        .onChange(of: BLEesp2.rfid1) { newValue in
+        .onChange(of: BLEespAct2.rfid1) { newValue in
             SharedToyBox.instance.bolt!.drawMatrix(fillFrom: Pixel(x: 0, y: 0), to: Pixel(x: 7, y: 2), color: .red)
-        }.onChange(of: BLEesp2.rfid2) { newValue in
+        }.onChange(of: BLEespAct2.rfid2) { newValue in
             SharedToyBox.instance.bolt!.drawMatrix(fillFrom: Pixel(x: 0, y: 3), to: Pixel(x: 7, y: 5), color: .blue)
-        }.onChange(of: BLEesp2.rfid3) { newValue in
+        }.onChange(of: BLEespAct2.rfid3) { newValue in
             SharedToyBox.instance.bolt!.drawMatrix(fillFrom: Pixel(x: 0, y: 6), to: Pixel(x: 7, y: 7), color: .green)
         }
         

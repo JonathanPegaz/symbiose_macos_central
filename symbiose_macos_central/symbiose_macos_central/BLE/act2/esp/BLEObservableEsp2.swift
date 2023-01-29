@@ -23,7 +23,7 @@ class BLEObservableEsp2:ObservableObject{
     @Published var rfid2: Bool = false
     @Published var rfid3: Bool = false
         
-    @Published var esp2value: String = ""
+    @Published var esp2Status: String = ""
     
     init(){
         _ = BLEManagerEsp2.instance
@@ -33,7 +33,7 @@ class BLEObservableEsp2:ObservableObject{
         BLEManagerEsp2.instance.scan { p,s in
             let periph = Periph(blePeriph: p,name: s)
             
-            if periph.name == "esp2"{
+            if periph.name == "esp_led_2"{
                 self.connectTo(p: periph)
                 self.stopScann()
             }
@@ -115,31 +115,12 @@ class BLEObservableEsp2:ObservableObject{
                     }
                     
                     if (self.rfid1 && self.rfid2 && self.rfid3) {
-                        self.esp2value = "endAct2"
-                        print("endAct2")
+                        self.esp2Status = "endact2"
+                        print("endact2")
                     }
                 }
             }
             
-//            if let d = data,
-//            let s = String(data: d, encoding: .utf8){
-//                self.dataReceived.append(DataReceived(content: s))
-//
-//                    if let doubleValue = Double(s){
-//                        self.dataPoints.append(LineChartDataPoint(value: doubleValue))
-//
-//                        if self.dataPoints.count == 100 {
-//                            print("Stop")
-//                            let data = "stopAccelero".data(using: .utf8)!
-//                            BLEManager.instance.sendStopData(data: data, callback: { t in
-//
-//                            })
-//                        }
-//
-//                        self.points = LineChartData(dataSets: LineDataSet(dataPoints: self.dataPoints))
-//                    //self.dataReceived.append(DataReceived(content: s))
-//                }
-//            }
         }
         
     }

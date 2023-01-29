@@ -28,7 +28,7 @@ class BLEObservableEsp1:ObservableObject{
     func startScann(){
         BLEManagerEsp1.instance.scan { p,s in
             let periph = Periph(blePeriph: p,name: s)
-            if periph.name == "esp1"{
+            if periph.name == "esp_led_1"{
                 self.connectTo(p: periph)
                 self.stopScann()
             }

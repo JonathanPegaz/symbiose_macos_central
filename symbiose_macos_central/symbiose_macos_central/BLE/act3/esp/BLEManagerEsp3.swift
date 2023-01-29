@@ -2,16 +2,16 @@ import Foundation
 import SwiftUI
 import CoreBluetooth
 
-class BLEManagerEsp2: NSObject {
-    static let instance = BLEManagerEsp2()
+class BLEManagerEsp3: NSObject {
+    static let instance = BLEManagerEsp3()
     
     var isBLEEnabled = false
     var isScanning = false
     let readCityCBUUID = CBUUID(string: "558759EE-0F86-49E7-A38A-DBE48CF8B237")
     
-    let authCBUUID = CBUUID(string: "1FCA55EC-A071-41D1-A77F-57F79D0BF114")
-    let writeCBUUID = CBUUID(string: "60482610-FD13-49E9-B76F-53A849092D3A")
-    let readCBUUID = CBUUID(string: "A21DC1E9-7437-4FD3-A6F7-D30270AF899E")
+    let authCBUUID = CBUUID(string: "31F4ABA1-9163-4241-A491-716894252D0C")
+    let writeCBUUID = CBUUID(string: "4A29E179-999D-40F1-A83A-9D1B7BD37BA5")
+    let readCBUUID = CBUUID(string: "5EC17857-F214-4DEE-967B-CD381EE7A2A4")
     var centralManager: CBCentralManager?
     var connectedPeripherals = [CBPeripheral]()
     var readyPeripherals = [CBPeripheral]()
@@ -94,8 +94,7 @@ class BLEManagerEsp2: NSObject {
     func sendData(data: Data, callback: @escaping (String?) -> ()) {
         sendDataCallback = callback
         for periph in readyPeripherals {
-            print(periph)
-            if let char = BLEManagerEsp2.instance.getCharForUUID(writeCBUUID, forperipheral: periph) {
+            if let char = BLEManagerEsp3.instance.getCharForUUID(writeCBUUID, forperipheral: periph) {
                 
                 periph.writeValue(data, for: char, type: CBCharacteristicWriteType.withResponse)
             }
@@ -106,7 +105,7 @@ class BLEManagerEsp2: NSObject {
     func sendStopCityData(data: Data, callback: @escaping (String?) -> ()) {
         sendDataCallback = callback
         for periph in readyPeripherals {
-            if let char = BLEManagerEsp2.instance.getCharForUUID(readCityCBUUID, forperipheral: periph) {
+            if let char = BLEManagerEsp3.instance.getCharForUUID(readCityCBUUID, forperipheral: periph) {
                 periph.writeValue(data, for: char, type: CBCharacteristicWriteType.withResponse)
             }
         }
@@ -115,7 +114,7 @@ class BLEManagerEsp2: NSObject {
     func sendStopData(data: Data, callback: @escaping (String?) -> ()) {
         sendDataCallback = callback
         for periph in readyPeripherals {
-            if let char = BLEManagerEsp2.instance.getCharForUUID(readCBUUID, forperipheral: periph) {
+            if let char = BLEManagerEsp3.instance.getCharForUUID(readCBUUID, forperipheral: periph) {
                 periph.writeValue(data, for: char, type: CBCharacteristicWriteType.withResponse)
             }
         }
@@ -123,7 +122,7 @@ class BLEManagerEsp2: NSObject {
 
     func readData() {
         for periph in readyPeripherals {
-            if let char = BLEManagerEsp2.instance.getCharForUUID(readCBUUID, forperipheral: periph) {
+            if let char = BLEManagerEsp3.instance.getCharForUUID(readCBUUID, forperipheral: periph) {
                 periph.readValue(for: char)
             }
         }
@@ -131,7 +130,7 @@ class BLEManagerEsp2: NSObject {
 
 }
 
-extension BLEManagerEsp2: CBPeripheralDelegate {
+extension BLEManagerEsp3: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         if let services = peripheral.services {
             for service in services {
@@ -156,7 +155,7 @@ extension BLEManagerEsp2: CBPeripheralDelegate {
     }
 }
 
-extension BLEManagerEsp2: CBCentralManagerDelegate {
+extension BLEManagerEsp3: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == .poweredOn {
             isBLEEnabled = true

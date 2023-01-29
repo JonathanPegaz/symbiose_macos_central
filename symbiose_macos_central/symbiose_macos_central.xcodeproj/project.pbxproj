@@ -15,17 +15,7 @@
 		ABB147352977508100E9EF56 /* symbiose_macos_centralUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147342977508100E9EF56 /* symbiose_macos_centralUITests.swift */; };
 		ABB147372977508100E9EF56 /* symbiose_macos_centralUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147362977508100E9EF56 /* symbiose_macos_centralUITestsLaunchTests.swift */; };
 		ABB14758297753F800E9EF56 /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14744297753F800E9EF56 /* BLEController.swift */; };
-		ABB14759297753F800E9EF56 /* BLEManagerEsp1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14747297753F800E9EF56 /* BLEManagerEsp1.swift */; };
-		ABB1475A297753F800E9EF56 /* BLEObservableEsp1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14748297753F800E9EF56 /* BLEObservableEsp1.swift */; };
-		ABB1475B297753F800E9EF56 /* BLEObservableMac1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1474A297753F800E9EF56 /* BLEObservableMac1.swift */; };
-		ABB1475C297753F800E9EF56 /* BLEManagerMac1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1474B297753F800E9EF56 /* BLEManagerMac1.swift */; };
 		ABB1475D297753F800E9EF56 /* BLEUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1474C297753F800E9EF56 /* BLEUtils.swift */; };
-		ABB1475E297753F800E9EF56 /* BLEManagerEsp2_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB1474F297753F800E9EF56 /* BLEManagerEsp2_3.swift */; };
-		ABB1475F297753F800E9EF56 /* BLEObservableEsp2_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14750297753F800E9EF56 /* BLEObservableEsp2_3.swift */; };
-		ABB14760297753F800E9EF56 /* BLEObservableMac3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14752297753F800E9EF56 /* BLEObservableMac3.swift */; };
-		ABB14761297753F800E9EF56 /* BLEManagerMac3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14753297753F800E9EF56 /* BLEManagerMac3.swift */; };
-		ABB14762297753F800E9EF56 /* BLEManagerEsp2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14756297753F800E9EF56 /* BLEManagerEsp2.swift */; };
-		ABB14763297753F800E9EF56 /* BLEObservableEsp2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB14757297753F800E9EF56 /* BLEObservableEsp2.swift */; };
 		ABB1479E2977552500E9EF56 /* SpheroSensorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147652977552500E9EF56 /* SpheroSensorControl.swift */; };
 		ABB1479F2977552500E9EF56 /* SharedToyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147672977552500E9EF56 /* SharedToyBox.swift */; };
 		ABB147A02977552500E9EF56 /* SDKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147692977552500E9EF56 /* SDKUtils.swift */; };
@@ -74,6 +64,18 @@
 		ABB147CD2977592500E9EF56 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147CC2977592500E9EF56 /* VideoManager.swift */; };
 		ABB147CF2977593200E9EF56 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB147CE2977593200E9EF56 /* CustomVideoPlayer.swift */; };
 		ABB147D12977594400E9EF56 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB147D02977594000E9EF56 /* video.mp4 */; };
+		EDEC194A2985CAB700EB3738 /* BLEManagerEsp1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC19452985CAB700EB3738 /* BLEManagerEsp1.swift */; };
+		EDEC194B2985CAB700EB3738 /* BLEObservableEsp1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC19462985CAB700EB3738 /* BLEObservableEsp1.swift */; };
+		EDEC194C2985CAB700EB3738 /* BLEObservableMac1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC19482985CAB700EB3738 /* BLEObservableMac1.swift */; };
+		EDEC194D2985CAB700EB3738 /* BLEManagerMac1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC19492985CAB700EB3738 /* BLEManagerMac1.swift */; };
+		EDEC19552985CABF00EB3738 /* BLEManagerEsp2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC19502985CABE00EB3738 /* BLEManagerEsp2.swift */; };
+		EDEC19562985CABF00EB3738 /* BLEObservableEsp2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC19512985CABE00EB3738 /* BLEObservableEsp2.swift */; };
+		EDEC19572985CABF00EB3738 /* BLEObservableEspAct2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC19532985CABE00EB3738 /* BLEObservableEspAct2.swift */; };
+		EDEC19582985CABF00EB3738 /* BLEManagerEspAct2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC19542985CABF00EB3738 /* BLEManagerEspAct2.swift */; };
+		EDEC19602985CACA00EB3738 /* BLEManagerEsp3.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC195B2985CACA00EB3738 /* BLEManagerEsp3.swift */; };
+		EDEC19612985CACA00EB3738 /* BLEObservableEsp3.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC195C2985CACA00EB3738 /* BLEObservableEsp3.swift */; };
+		EDEC19622985CACA00EB3738 /* BLEObservableMac3.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC195E2985CACA00EB3738 /* BLEObservableMac3.swift */; };
+		EDEC19632985CACA00EB3738 /* BLEManagerMac3.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC195F2985CACA00EB3738 /* BLEManagerMac3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,17 +108,7 @@
 		ABB147342977508100E9EF56 /* symbiose_macos_centralUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = symbiose_macos_centralUITests.swift; sourceTree = "<group>"; };
 		ABB147362977508100E9EF56 /* symbiose_macos_centralUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = symbiose_macos_centralUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ABB14744297753F800E9EF56 /* BLEController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
-		ABB14747297753F800E9EF56 /* BLEManagerEsp1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEsp1.swift; sourceTree = "<group>"; };
-		ABB14748297753F800E9EF56 /* BLEObservableEsp1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEsp1.swift; sourceTree = "<group>"; };
-		ABB1474A297753F800E9EF56 /* BLEObservableMac1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableMac1.swift; sourceTree = "<group>"; };
-		ABB1474B297753F800E9EF56 /* BLEManagerMac1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerMac1.swift; sourceTree = "<group>"; };
 		ABB1474C297753F800E9EF56 /* BLEUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEUtils.swift; sourceTree = "<group>"; };
-		ABB1474F297753F800E9EF56 /* BLEManagerEsp2_3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEsp2_3.swift; sourceTree = "<group>"; };
-		ABB14750297753F800E9EF56 /* BLEObservableEsp2_3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEsp2_3.swift; sourceTree = "<group>"; };
-		ABB14752297753F800E9EF56 /* BLEObservableMac3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableMac3.swift; sourceTree = "<group>"; };
-		ABB14753297753F800E9EF56 /* BLEManagerMac3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerMac3.swift; sourceTree = "<group>"; };
-		ABB14756297753F800E9EF56 /* BLEManagerEsp2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEsp2.swift; sourceTree = "<group>"; };
-		ABB14757297753F800E9EF56 /* BLEObservableEsp2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEsp2.swift; sourceTree = "<group>"; };
 		ABB147652977552500E9EF56 /* SpheroSensorControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheroSensorControl.swift; sourceTree = "<group>"; };
 		ABB147672977552500E9EF56 /* SharedToyBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedToyBox.swift; sourceTree = "<group>"; };
 		ABB147692977552500E9EF56 /* SDKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKUtils.swift; sourceTree = "<group>"; };
@@ -165,6 +157,18 @@
 		ABB147CC2977592500E9EF56 /* VideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		ABB147CE2977593200E9EF56 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
 		ABB147D02977594000E9EF56 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		EDEC19452985CAB700EB3738 /* BLEManagerEsp1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEsp1.swift; sourceTree = "<group>"; };
+		EDEC19462985CAB700EB3738 /* BLEObservableEsp1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEsp1.swift; sourceTree = "<group>"; };
+		EDEC19482985CAB700EB3738 /* BLEObservableMac1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableMac1.swift; sourceTree = "<group>"; };
+		EDEC19492985CAB700EB3738 /* BLEManagerMac1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerMac1.swift; sourceTree = "<group>"; };
+		EDEC19502985CABE00EB3738 /* BLEManagerEsp2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEsp2.swift; sourceTree = "<group>"; };
+		EDEC19512985CABE00EB3738 /* BLEObservableEsp2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEsp2.swift; sourceTree = "<group>"; };
+		EDEC19532985CABE00EB3738 /* BLEObservableEspAct2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEspAct2.swift; sourceTree = "<group>"; };
+		EDEC19542985CABF00EB3738 /* BLEManagerEspAct2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEspAct2.swift; sourceTree = "<group>"; };
+		EDEC195B2985CACA00EB3738 /* BLEManagerEsp3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerEsp3.swift; sourceTree = "<group>"; };
+		EDEC195C2985CACA00EB3738 /* BLEObservableEsp3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableEsp3.swift; sourceTree = "<group>"; };
+		EDEC195E2985CACA00EB3738 /* BLEObservableMac3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObservableMac3.swift; sourceTree = "<group>"; };
+		EDEC195F2985CACA00EB3738 /* BLEManagerMac3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManagerMac3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,84 +259,13 @@
 		ABB14743297753F800E9EF56 /* BLE */ = {
 			isa = PBXGroup;
 			children = (
+				EDEC19432985CAB700EB3738 /* act1 */,
+				EDEC194E2985CABE00EB3738 /* act2 */,
+				EDEC19592985CACA00EB3738 /* act3 */,
 				ABB14744297753F800E9EF56 /* BLEController.swift */,
 				ABB1474C297753F800E9EF56 /* BLEUtils.swift */,
-				ABB14745297753F800E9EF56 /* act1 */,
-				ABB1474D297753F800E9EF56 /* act3 */,
-				ABB14754297753F800E9EF56 /* act2 */,
 			);
 			path = BLE;
-			sourceTree = "<group>";
-		};
-		ABB14745297753F800E9EF56 /* act1 */ = {
-			isa = PBXGroup;
-			children = (
-				ABB14746297753F800E9EF56 /* esp */,
-				ABB14749297753F800E9EF56 /* app */,
-			);
-			path = act1;
-			sourceTree = "<group>";
-		};
-		ABB14746297753F800E9EF56 /* esp */ = {
-			isa = PBXGroup;
-			children = (
-				ABB14747297753F800E9EF56 /* BLEManagerEsp1.swift */,
-				ABB14748297753F800E9EF56 /* BLEObservableEsp1.swift */,
-			);
-			path = esp;
-			sourceTree = "<group>";
-		};
-		ABB14749297753F800E9EF56 /* app */ = {
-			isa = PBXGroup;
-			children = (
-				ABB1474A297753F800E9EF56 /* BLEObservableMac1.swift */,
-				ABB1474B297753F800E9EF56 /* BLEManagerMac1.swift */,
-			);
-			path = app;
-			sourceTree = "<group>";
-		};
-		ABB1474D297753F800E9EF56 /* act3 */ = {
-			isa = PBXGroup;
-			children = (
-				ABB1474E297753F800E9EF56 /* esp */,
-				ABB14751297753F800E9EF56 /* app */,
-			);
-			path = act3;
-			sourceTree = "<group>";
-		};
-		ABB1474E297753F800E9EF56 /* esp */ = {
-			isa = PBXGroup;
-			children = (
-				ABB1474F297753F800E9EF56 /* BLEManagerEsp2_3.swift */,
-				ABB14750297753F800E9EF56 /* BLEObservableEsp2_3.swift */,
-			);
-			path = esp;
-			sourceTree = "<group>";
-		};
-		ABB14751297753F800E9EF56 /* app */ = {
-			isa = PBXGroup;
-			children = (
-				ABB14752297753F800E9EF56 /* BLEObservableMac3.swift */,
-				ABB14753297753F800E9EF56 /* BLEManagerMac3.swift */,
-			);
-			path = app;
-			sourceTree = "<group>";
-		};
-		ABB14754297753F800E9EF56 /* act2 */ = {
-			isa = PBXGroup;
-			children = (
-				ABB14755297753F800E9EF56 /* esp */,
-			);
-			path = act2;
-			sourceTree = "<group>";
-		};
-		ABB14755297753F800E9EF56 /* esp */ = {
-			isa = PBXGroup;
-			children = (
-				ABB14756297753F800E9EF56 /* BLEManagerEsp2.swift */,
-				ABB14757297753F800E9EF56 /* BLEObservableEsp2.swift */,
-			);
-			path = esp;
 			sourceTree = "<group>";
 		};
 		ABB147642977552500E9EF56 /* Sphero */ = {
@@ -493,6 +426,88 @@
 			path = video;
 			sourceTree = "<group>";
 		};
+		EDEC19432985CAB700EB3738 /* act1 */ = {
+			isa = PBXGroup;
+			children = (
+				EDEC19442985CAB700EB3738 /* esp */,
+				EDEC19472985CAB700EB3738 /* app */,
+			);
+			path = act1;
+			sourceTree = "<group>";
+		};
+		EDEC19442985CAB700EB3738 /* esp */ = {
+			isa = PBXGroup;
+			children = (
+				EDEC19452985CAB700EB3738 /* BLEManagerEsp1.swift */,
+				EDEC19462985CAB700EB3738 /* BLEObservableEsp1.swift */,
+			);
+			path = esp;
+			sourceTree = "<group>";
+		};
+		EDEC19472985CAB700EB3738 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				EDEC19482985CAB700EB3738 /* BLEObservableMac1.swift */,
+				EDEC19492985CAB700EB3738 /* BLEManagerMac1.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		EDEC194E2985CABE00EB3738 /* act2 */ = {
+			isa = PBXGroup;
+			children = (
+				EDEC194F2985CABE00EB3738 /* esp */,
+				EDEC19522985CABE00EB3738 /* esp_activite */,
+			);
+			name = act2;
+			path = symbiose_macos_central/BLE/act2;
+			sourceTree = SOURCE_ROOT;
+		};
+		EDEC194F2985CABE00EB3738 /* esp */ = {
+			isa = PBXGroup;
+			children = (
+				EDEC19502985CABE00EB3738 /* BLEManagerEsp2.swift */,
+				EDEC19512985CABE00EB3738 /* BLEObservableEsp2.swift */,
+			);
+			path = esp;
+			sourceTree = "<group>";
+		};
+		EDEC19522985CABE00EB3738 /* esp_activite */ = {
+			isa = PBXGroup;
+			children = (
+				EDEC19532985CABE00EB3738 /* BLEObservableEspAct2.swift */,
+				EDEC19542985CABF00EB3738 /* BLEManagerEspAct2.swift */,
+			);
+			path = esp_activite;
+			sourceTree = "<group>";
+		};
+		EDEC19592985CACA00EB3738 /* act3 */ = {
+			isa = PBXGroup;
+			children = (
+				EDEC195A2985CACA00EB3738 /* esp */,
+				EDEC195D2985CACA00EB3738 /* app */,
+			);
+			path = act3;
+			sourceTree = "<group>";
+		};
+		EDEC195A2985CACA00EB3738 /* esp */ = {
+			isa = PBXGroup;
+			children = (
+				EDEC195B2985CACA00EB3738 /* BLEManagerEsp3.swift */,
+				EDEC195C2985CACA00EB3738 /* BLEObservableEsp3.swift */,
+			);
+			path = esp;
+			sourceTree = "<group>";
+		};
+		EDEC195D2985CACA00EB3738 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				EDEC195E2985CACA00EB3738 /* BLEObservableMac3.swift */,
+				EDEC195F2985CACA00EB3738 /* BLEManagerMac3.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -628,61 +643,63 @@
 				ABB147A52977552500E9EF56 /* SpheroV1Toy.swift in Sources */,
 				ABB147B62977552500E9EF56 /* CommandV2.swift in Sources */,
 				ABB1471B2977508000E9EF56 /* ContentView.swift in Sources */,
-				ABB14760297753F800E9EF56 /* BLEObservableMac3.swift in Sources */,
 				ABB147C72977552500E9EF56 /* FFNN.swift in Sources */,
 				ABB147B42977552500E9EF56 /* CommandOperationV2.swift in Sources */,
 				ABB147A02977552500E9EF56 /* SDKUtils.swift in Sources */,
+				EDEC19572985CABF00EB3738 /* BLEObservableEspAct2.swift in Sources */,
+				EDEC19552985CABF00EB3738 /* BLEManagerEsp2.swift in Sources */,
 				ABB147B72977552500E9EF56 /* VersionsCommandResponse.swift in Sources */,
 				ABB147C82977552500E9EF56 /* Operations.swift in Sources */,
 				ABB147C02977552500E9EF56 /* CommandV1.swift in Sources */,
+				EDEC19582985CABF00EB3738 /* BLEManagerEspAct2.swift in Sources */,
 				ABB147192977508000E9EF56 /* symbiose_macos_centralApp.swift in Sources */,
 				ABB147B22977552500E9EF56 /* Color+Utils.swift in Sources */,
-				ABB1475C297753F800E9EF56 /* BLEManagerMac1.swift in Sources */,
 				ABB147C62977552500E9EF56 /* Vector.swift in Sources */,
-				ABB14759297753F800E9EF56 /* BLEManagerEsp1.swift in Sources */,
 				ABB147AA2977552500E9EF56 /* SpheroV2Toy.swift in Sources */,
+				EDEC194A2985CAB700EB3738 /* BLEManagerEsp1.swift in Sources */,
 				ABB147A22977552500E9EF56 /* SensorControl.swift in Sources */,
+				EDEC194C2985CAB700EB3738 /* BLEObservableMac1.swift in Sources */,
 				ABB147B12977552500E9EF56 /* ToyBox.swift in Sources */,
 				ABB147A12977552500E9EF56 /* Toy.swift in Sources */,
-				ABB1475F297753F800E9EF56 /* BLEObservableEsp2_3.swift in Sources */,
 				ABB147B52977552500E9EF56 /* CommandSequencerV2.swift in Sources */,
 				ABB14758297753F800E9EF56 /* BLEController.swift in Sources */,
 				ABB147B32977552500E9EF56 /* SensorUtils.swift in Sources */,
 				ABB147BF2977552500E9EF56 /* CommandV1Sequencer.swift in Sources */,
-				ABB14762297753F800E9EF56 /* BLEManagerEsp2.swift in Sources */,
 				ABB147AF2977552500E9EF56 /* ToyProtocols.swift in Sources */,
-				ABB14763297753F800E9EF56 /* BLEObservableEsp2.swift in Sources */,
 				ABB147C32977552500E9EF56 /* Storage.swift in Sources */,
 				ABB147A32977552500E9EF56 /* SPRKToy.swift in Sources */,
 				ABB147BE2977552500E9EF56 /* CommandV1Operation.swift in Sources */,
 				ABB1479F2977552500E9EF56 /* SharedToyBox.swift in Sources */,
 				ABB147C52977552500E9EF56 /* FFNN+Storage.swift in Sources */,
 				ABB147A92977552500E9EF56 /* BB9EToy.swift in Sources */,
+				EDEC19562985CABF00EB3738 /* BLEObservableEsp2.swift in Sources */,
 				ABB147AD2977552500E9EF56 /* SpheroV2ToyCore.swift in Sources */,
 				ABB147A42977552500E9EF56 /* SensorControlV1.swift in Sources */,
 				ABB147CA2977552500E9EF56 /* FFNN+Metal.swift in Sources */,
 				ABB147BC2977552500E9EF56 /* PowerStateResponse.swift in Sources */,
 				ABB147B92977552500E9EF56 /* SensorCommandResponseV2.swift in Sources */,
 				ABB147AC2977552500E9EF56 /* R2D2Toy.swift in Sources */,
+				EDEC19622985CACA00EB3738 /* BLEObservableMac3.swift in Sources */,
 				ABB1475D297753F800E9EF56 /* BLEUtils.swift in Sources */,
 				ABB147C22977552500E9EF56 /* String+Utils.swift in Sources */,
+				EDEC19612985CACA00EB3738 /* BLEObservableEsp3.swift in Sources */,
 				ABB147B82977552500E9EF56 /* ShouldActionCompleteResponse.swift in Sources */,
-				ABB1475B297753F800E9EF56 /* BLEObservableMac1.swift in Sources */,
 				ABB147AB2977552500E9EF56 /* BoltToy.swift in Sources */,
-				ABB14761297753F800E9EF56 /* BLEManagerMac3.swift in Sources */,
 				ABB147BD2977552500E9EF56 /* CollisionData.swift in Sources */,
+				EDEC194B2985CAB700EB3738 /* BLEObservableEsp1.swift in Sources */,
 				ABB147CD2977592500E9EF56 /* VideoManager.swift in Sources */,
 				ABB1479E2977552500E9EF56 /* SpheroSensorControl.swift in Sources */,
 				ABB147A82977552500E9EF56 /* SensorControlV2.swift in Sources */,
-				ABB1475A297753F800E9EF56 /* BLEObservableEsp1.swift in Sources */,
 				ABB147BA2977552500E9EF56 /* SensorCommandResponse.swift in Sources */,
 				ABB147C12977552500E9EF56 /* Double+Utils.swift in Sources */,
+				EDEC194D2985CAB700EB3738 /* BLEManagerMac1.swift in Sources */,
 				ABB147B02977552500E9EF56 /* CBUUID+SpheroUUIDs.swift in Sources */,
 				ABB147C42977552500E9EF56 /* Random.swift in Sources */,
 				ABB147CF2977593200E9EF56 /* CustomVideoPlayer.swift in Sources */,
-				ABB1475E297753F800E9EF56 /* BLEManagerEsp2_3.swift in Sources */,
 				ABB147A72977552500E9EF56 /* BB8Toy.swift in Sources */,
+				EDEC19602985CACA00EB3738 /* BLEManagerEsp3.swift in Sources */,
 				ABB147BB2977552500E9EF56 /* SensorMaskCommandResponse.swift in Sources */,
+				EDEC19632985CACA00EB3738 /* BLEManagerMac3.swift in Sources */,
 				ABB147C92977552500E9EF56 /* Matrix.swift in Sources */,
 				ABB147AE2977552500E9EF56 /* MiniToy.swift in Sources */,
 			);
