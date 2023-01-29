@@ -94,7 +94,7 @@ class BLEManagerEspAct2: NSObject {
     func sendData(data: Data, callback: @escaping (String?) -> ()) {
         sendDataCallback = callback
         for periph in readyPeripherals {
-            if let char = BLEManagerEsp2.instance.getCharForUUID(writeCBUUID, forperipheral: periph) {
+            if let char = BLEManagerEspAct2.instance.getCharForUUID(writeCBUUID, forperipheral: periph) {
                 
                 periph.writeValue(data, for: char, type: CBCharacteristicWriteType.withResponse)
             }
@@ -105,7 +105,7 @@ class BLEManagerEspAct2: NSObject {
     func sendStopCityData(data: Data, callback: @escaping (String?) -> ()) {
         sendDataCallback = callback
         for periph in readyPeripherals {
-            if let char = BLEManagerEsp2.instance.getCharForUUID(readCityCBUUID, forperipheral: periph) {
+            if let char = BLEManagerEspAct2.instance.getCharForUUID(readCityCBUUID, forperipheral: periph) {
                 periph.writeValue(data, for: char, type: CBCharacteristicWriteType.withResponse)
             }
         }
@@ -114,7 +114,7 @@ class BLEManagerEspAct2: NSObject {
     func sendStopData(data: Data, callback: @escaping (String?) -> ()) {
         sendDataCallback = callback
         for periph in readyPeripherals {
-            if let char = BLEManagerEsp2.instance.getCharForUUID(readCBUUID, forperipheral: periph) {
+            if let char = BLEManagerEspAct2.instance.getCharForUUID(readCBUUID, forperipheral: periph) {
                 periph.writeValue(data, for: char, type: CBCharacteristicWriteType.withResponse)
             }
         }
@@ -122,7 +122,7 @@ class BLEManagerEspAct2: NSObject {
 
     func readData() {
         for periph in readyPeripherals {
-            if let char = BLEManagerEsp2.instance.getCharForUUID(readCBUUID, forperipheral: periph) {
+            if let char = BLEManagerEspAct2.instance.getCharForUUID(readCBUUID, forperipheral: periph) {
                 periph.readValue(for: char)
             }
         }
